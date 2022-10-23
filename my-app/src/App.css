@@ -25,6 +25,7 @@
   }
   .text-dark-primary{
     color: #fcbc73 !important;
+    text-decoration: none;
   }
   
   /* theme light */
@@ -36,7 +37,9 @@
   }
   .bg-light-primary{
     background-color: #191659 !important;
+    text-decoration: none;
   }
   .text-light-primary{
     color: #191659 !important;
+    text-decoration: none;
   }
