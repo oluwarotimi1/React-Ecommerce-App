@@ -8,6 +8,7 @@ import { Router } from '@reach/router';
 
 import Home from './Pages/Home';
 import Cart from './Pages/Cart';
+import Footer from './Components/Footer';
 
 const App = () => {
   const{theme} = useThemeHook();
@@ -18,6 +19,7 @@ const App = () => {
         <Home path='/' />
         <Cart path='/cart'/>
       </Router>
+      <Footer />
       
     </main>
   )
