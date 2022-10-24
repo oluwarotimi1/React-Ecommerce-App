@@ -4,7 +4,6 @@ footer{
     text-align: center;
     font-size: 0.9rem;
     margin-top: 12rem;
-    display: none;
 }
 footer a{
     color: var(--color-bg);

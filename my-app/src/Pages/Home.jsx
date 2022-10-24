@@ -22,15 +22,17 @@ const Home = () => {
 
     return (
         <Container className="py-4">
-            <Row className="justify-content-center">
+            <Row className="justify-content-center my-5">
+                <h1 className={`${theme? 'text-dark-primary': 'text-light-primary'} text-center`}>Welcome To Shopify</h1>
                 <Col xs={10} md={7} lg={6} xl={4} className="mb-3 mx-auto text-center">
-                    <h1 className={theme? 'text-light my-5': 'text-black my-5'}>Search products</h1>
+                    
+                    <h2 className={theme? 'text-light my-5': 'text-black my-5'}>Search products</h2>
                     <InputGroup className="mb-3" style={{outline:'none'}}>
                         <InputGroup.Text className={theme? 'bg-black text-dark-primary': 'bg-light text-light-primary'}>
                             <BiSearch size="2rem" />
                         </InputGroup.Text>
                         <FormControl 
-                            placeholder="Search"
+                            placeholder="Search products, brands and categories"
                             value={searchInput}
                             onChange={(e)=> setSearchInput(e.target.value)}
                             className={theme? '': ''}

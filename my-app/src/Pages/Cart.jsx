@@ -84,12 +84,15 @@ const Cart = () => {
                                 Clear Cart
                             </Button>
                             {/* /***************** CHECK OUT FORM IS HERE */ }
-                            <Button variant="success"
-                                    className="m-2"
-                                >
-                                    <BsCartCheck size="1.7rem" />
-                                    Checkout
-                            </Button>
+                            <Link to='/cart/checkout'>
+                                <Button variant="success"
+                                        className="m-2"
+                                    >
+                                        <BsCartCheck size="1.7rem" />
+                                        Checkout
+                                </Button>
+                            </Link>
+                            
                         </Col>
                     </Row>}
             </Row>

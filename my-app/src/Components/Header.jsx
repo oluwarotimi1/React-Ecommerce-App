@@ -27,8 +27,8 @@ const Header = () => {
         >
       <Container>
         <Link className={`${darkMode? 'text-dark-primary': 'text-light-primary'} d-flex`} to="/">
-            <Navbar.Brand  >
-                <b>Shopify</b>
+            <Navbar.Brand >
+                <b>SHOPIFY</b>
             </Navbar.Brand>
             
             
@@ -49,8 +49,13 @@ const Header = () => {
             </Link>
             </Nav.Link>
             <Nav.Link>
-              <Link className={darkMode? 'text-dark-primary': 'text-light-primary'} to="/">
+              <Link className={darkMode? 'text-dark-primary': 'text-light-primary'} to="/contact">
              Contact Us
+            </Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link className={darkMode? 'text-dark-primary': 'text-light-primary'} to="/about">
+             About 
             </Link>
             </Nav.Link>
             
