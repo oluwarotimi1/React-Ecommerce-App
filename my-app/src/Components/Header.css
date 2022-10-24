@@ -1,0 +1,21 @@
+.media-cart{
+    display: none;
+}
+.media-cart-2{
+    display: flex;
+    align-items: center;
+}
+@media screen and (max-width: 1024px){
+    .media-cart{
+        display: none;
+    }
+ }
+ @media screen and (max-width: 600px){
+    .media-cart{
+        display: flex;
+        align-items: center;
+    }
+    .media-cart-2{
+        display: none;
+    }
+ }

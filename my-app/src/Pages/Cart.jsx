@@ -3,6 +3,7 @@ import { Button, Container, Col, Row, Table} from 'react-bootstrap';
 import { useCart } from 'react-use-cart';
 import { useThemeHook } from '../GlobalComponents/ThemeProvider';
 import { BsCartCheck, BsCartX} from 'react-icons/bs';
+import { Link } from '@reach/router';
 
 const Cart = () => {
     const {theme} = useThemeHook();
@@ -15,11 +16,26 @@ const Cart = () => {
         emptyCart,
     } = useCart();
     return (
-        <Container className="py-4 mt-5">
+        <Container className="py-4 mt-5 mb-5">
             <h1 className={`${theme? 'text-light': 'text-light-primary'} my-5 text-center`}>
-                {isEmpty? 'Your Cart is Empty' : 'Your Cart'}
+                {isEmpty?
+                 <h3>
+                <div className={`${theme? 'text-light': 'text-light-primary'} my-5 text-center`}>
+                    <h1> Your cart is empty</h1>
+                </div>
+                </h3> : 'Your Cart'}
             </h1>
-            <Row className="justify-content-center">
+            <div className={`${theme? 'text-light': 'text-light-primary'} my-5 text-center`}>
+                <Link to="/"> 
+                    <Button 
+                        className={`${theme? 'bg-dark-primary text-black':'bg-light-primary' }`}
+                    >View Products</Button>
+                </Link>
+            </div>
+            
+            
+            
+            <Row className="justify-content-center mb-5">
                 <Table responsive="sm" striped bordered hover variant={theme? 'dark': 'light'} className="mb-5">
                     <tbody>
                         {items.map((item, index)=>{
@@ -70,7 +86,7 @@ const Cart = () => {
                                 className="m-2"
                             >
                                 <BsCartCheck size="1.7rem" />
-                                Proceed To Checkout
+                                Checkout
                             </Button>
                         </Col>
                     </Row>}

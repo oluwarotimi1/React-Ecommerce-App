@@ -18,6 +18,7 @@ const App = () => {
       <Router>
         <Home path='/' />
         <Cart path='/cart'/>
+        {/* <Footer path='/footer'/> */}
       </Router>
       <Footer />
       
