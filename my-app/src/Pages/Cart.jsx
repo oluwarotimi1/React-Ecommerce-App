@@ -19,19 +19,20 @@ const Cart = () => {
         <Container className="py-4 mt-5 mb-5">
             <h1 className={`${theme? 'text-light': 'text-light-primary'} my-5 text-center`}>
                 {isEmpty?
-                 <h3>
+                 <span>
                 <div className={`${theme? 'text-light': 'text-light-primary'} my-5 text-center`}>
-                    <h1> Your cart is empty</h1>
+                    <span> Your cart is empty</span>
+                    <div className={`${theme? 'text-light': 'text-light-primary'} my-5 text-center`}>
+                        <Link to="/"> 
+                            <Button 
+                                className={`${theme? 'bg-dark-primary text-black':'bg-light-primary' }`}
+                            >View Products</Button>
+                        </Link>
+                    </div>
                 </div>
-                </h3> : 'Your Cart'}
+                </span> : 'Your Cart'}
             </h1>
-            <div className={`${theme? 'text-light': 'text-light-primary'} my-5 text-center`}>
-                <Link to="/"> 
-                    <Button 
-                        className={`${theme? 'bg-dark-primary text-black':'bg-light-primary' }`}
-                    >View Products</Button>
-                </Link>
-            </div>
+            
             
             
             
@@ -69,7 +70,7 @@ const Cart = () => {
                 {!isEmpty &&
                     <Row 
                         style={{ position: 'fixed', bottom: 0}}
-                        className={`${theme? 'bg-light-black text-light' : 'bg-light text-balck'} justify-content-center w-100`}
+                        className={`${theme? 'bg-light-black text-light' : 'bg-light text-black'} justify-content-center w-100`}
                     >
                         <Col className="py-2">
                             <h4>Total Price: Rs. {cartTotal}</h4>
@@ -82,11 +83,12 @@ const Cart = () => {
                                 <BsCartX size="1.7rem" />
                                 Clear Cart
                             </Button>
+                            {/* /***************** CHECK OUT FORM IS HERE */ }
                             <Button variant="success"
-                                className="m-2"
-                            >
-                                <BsCartCheck size="1.7rem" />
-                                Checkout
+                                    className="m-2"
+                                >
+                                    <BsCartCheck size="1.7rem" />
+                                    Checkout
                             </Button>
                         </Col>
                     </Row>}

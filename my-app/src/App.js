@@ -9,6 +9,7 @@ import { Router } from '@reach/router';
 import Home from './Pages/Home';
 import Cart from './Pages/Cart';
 import Footer from './Components/Footer';
+import CheckOut from './Pages/CheckOut';
 
 const App = () => {
   const{theme} = useThemeHook();
@@ -18,7 +19,7 @@ const App = () => {
       <Router>
         <Home path='/' />
         <Cart path='/cart'/>
-        {/* <Footer path='/footer'/> */}
+        {/* <CheckOut path='/checkout'/> */}
       </Router>
       <Footer />
       
